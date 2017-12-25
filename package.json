@@ -1,0 +1,26 @@
+{
+  "name": "chat-application-node-mongo",
+  "version": "1.0.0",
+  "description": "Chat application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "8.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titisatyam/Chat-Application-Node-Mongo.git"
+  },
+  "author": "satyam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/titisatyam/Chat-Application-Node-Mongo/issues"
+  },
+  "homepage": "https://github.com/titisatyam/Chat-Application-Node-Mongo#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
