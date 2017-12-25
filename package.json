@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/titisatyam/Chat-Application-Node-Mongo#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "socket.io": "^1.7.4"
   }
 }
