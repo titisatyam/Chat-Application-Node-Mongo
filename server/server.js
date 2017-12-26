@@ -3,6 +3,8 @@ const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
 
+const{generateMessage} = require('./utils/message')
+
 const publicPath = path.join(__dirname, '../public');
 
 const port = process.env.PORT || 3000;
@@ -33,13 +35,10 @@ io.on('connection', (socket) => {
     });
 
 
-    socket.on('createMessage', (message) => {
+    socket.on('createMessage', (message,callback) => {
         console.log('message', message);
-        io.emit('newMessage', {
-            from: message.from,
-            text: message.text,
-            createAt: new Date().getTime()
-        });
+        io.emit('newMessage', generateMessage( message.from, message.text ));
+        callback('This is from the server.');
         //
         // socket.broadcast.emit('newMessage',{
         //     from: message.from,
